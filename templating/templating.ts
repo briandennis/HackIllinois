@@ -7,19 +7,21 @@ import {secondComponent} from './secondComponent';
              <h2>{{numUsers}}</h2>
              <second-component></second-component>
              <button (click)='buttonClicked()'>Click me!</button>
+             <input type="text" #name>
+             <button (click)="name.focus()">Focus the input</button>
              `,
   directives: [secondComponent]
 })
 export class myApp {
 
-  numUsers: number = 72;
+  numUsers: number = 0;
 
   getName (){
     return 'Brian';
   }
 
   buttonClicked(){
-    alert('Way to follow directions!');
+    this.numUsers++;
   }
 
 }
