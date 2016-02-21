@@ -1,0 +1,45 @@
+$note: #FFFFA5;
+
+body{
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#headerWrapper{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  #titleWrapper{
+    text-align: center;
+    flex-grow: 1;
+    font-size: 1.5em;
+  }
+
+  #headerButtons{
+
+    flex-grow: 2;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    button{
+      border: solid 2px blue;
+      border-radius: 10px;
+      background: white;
+      color: blue;
+      font-size: 1.5em;
+      margin: 10px;
+    }
+    button:hover{
+      border: solid 2px black;
+      color: black;
+    }
+  }
+}

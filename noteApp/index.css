@@ -1,0 +1,33 @@
+body {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif; }
+
+#headerWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; }
+  #headerWrapper #titleWrapper {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 1.5em; }
+  #headerWrapper #headerButtons {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end; }
+    #headerWrapper #headerButtons button {
+      border: solid 2px blue;
+      border-radius: 10px;
+      background: white;
+      color: blue;
+      font-size: 1.5em;
+      margin: 10px; }
+    #headerWrapper #headerButtons button:hover {
+      border: solid 2px black;
+      color: black; }
+
+/*# sourceMappingURL=index.css.map */
