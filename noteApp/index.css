@@ -32,6 +32,11 @@ body {
     #headerWrapper #headerButtons button:hover {
       border: solid 2px black;
       color: black; }
+    #headerWrapper #headerButtons button:focus {
+      outline: none; }
+    #headerWrapper #headerButtons button:active {
+      color: gray;
+      border: solid 2px gray; }
 
 #noteBoard {
   width: 80%;

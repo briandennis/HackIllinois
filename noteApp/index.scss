@@ -49,6 +49,13 @@ body{
       border: solid 2px black;
       color: black;
     }
+    button:focus{
+      outline: none;
+    }
+    button:active{
+      color: gray;
+      border: solid 2px gray;
+    }
   }
 }
 
