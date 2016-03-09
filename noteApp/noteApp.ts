@@ -15,12 +15,15 @@ import {NoteService} from './noteService';
 })
 export class noteApp {
 
-  private _noteService:NoteService;
+  private _noteService: NoteService;
+  private _notes: Note[];
 
-  constructor(notesService:NoteService){
+  constructor(notesService: NoteService){
     this._noteService = notesService;
+    this.initiateNotes();
   }
 
-  notes: string[] = ['testing', 'this is a test', 'this is yet another test'];
-
+  initiateNotes(){
+    this._notes = this._noteService.getNotes();
+  }
 }
