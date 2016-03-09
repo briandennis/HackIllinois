@@ -21,5 +21,4 @@ export class Note{
   updateText(){
     this.text = window.prompt('Note: ');
   }
-
 }
