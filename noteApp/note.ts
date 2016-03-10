@@ -16,7 +16,11 @@ import {Component} from 'angular2/core';
 })
 export class Note{
 
-  text: string = 'Note text...';
+  text: string;
+
+  constructor(noteText: string){
+    this.text = noteText;
+  }
 
   updateText(){
     this.text = window.prompt('Note: ');
