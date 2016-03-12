@@ -6,7 +6,7 @@ import {NoteService} from './noteService';
 @Component({
   selector: 'note-app',
   template: `
-    <na-header []='this._noteService.createNote()'></na-header>
+    <na-header></na-header>
     <div *ngFor="#note of notes" id='noteBoard'>
       {{note}}
     </div>
@@ -21,10 +21,6 @@ export class noteApp {
 
   constructor(notesService: NoteService){
     this._noteService = notesService;
-    this.initiateNotes();
-  }
-
-  initiateNotes(){
     this.notes = this._noteService.getNotes();
   }
 }

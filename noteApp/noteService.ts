@@ -4,11 +4,7 @@ import {Note} from './note';
 @Injectable()
 export class NoteService {
 
-  notes:Note[] = [new Note('Hello world!')];
-
-  constructor(notes:Note[] ){
-    this.notes = notes;
-  }
+  notes:Note[];
 
   getNotes(){
     return this.notes;
