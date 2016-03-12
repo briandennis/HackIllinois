@@ -6,17 +6,18 @@ import {NoteService} from './noteService';
 @Component({
   selector: 'note-app',
   template: `
-    <na-header></na-header>
-    <div id='noteBoard'>
-      <na-note> </na-note>
+    <na-header []='this._noteService.createNote()'></na-header>
+    <div *ngFor="#note of notes" id='noteBoard'>
+      {{note}}
     </div>
   `,
-  directives: [Header, Note, NoteService]
+  directives: [Header, Note],
+  providers: [NoteService]
 })
 export class noteApp {
 
   private _noteService: NoteService;
-  private _notes: Note[];
+  notes: Note[];
 
   constructor(notesService: NoteService){
     this._noteService = notesService;
@@ -24,6 +25,6 @@ export class noteApp {
   }
 
   initiateNotes(){
-    this._notes = this._noteService.getNotes();
+    this.notes = this._noteService.getNotes();
   }
 }

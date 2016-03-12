@@ -12,12 +12,12 @@ import {Component} from 'angular2/core';
           <button>Add Note </button>
         </div>
         <div class='buttonWrapper'>
-          <button>Delete Notes </button>
+          <button>Delete Notes</button>
         </div>
       </div>
     </div>
   `
 })
 export class Header{
-
+  createNote: (text: string) => void;
 }
